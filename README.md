@@ -7,7 +7,8 @@
 </p>
 
 - Predict `intent` and `slot` at the same time from **one BERT model** (=Joint model)
-- total_loss = intent_loss + coef \* slot_loss (Change coef with `--slot_loss_coef` option)
+- batch_loss = batch_intent_loss + batch_slot_loss
 - **If you want to use CRF layer, set 'use-crf'=True in main.py**
+- seq_acc is the whole sentence accuracy when doing slot filling
 
 In order to run this code, please download bert model first.
